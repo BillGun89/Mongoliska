@@ -214,6 +214,31 @@ textarea { width: 100%; font-family: var(--mono); font-size: 13px; }
 
 .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 9px 16px; border-radius: var(--r); font-size: 14px; z-index: 20; max-width: calc(100% - 32px); }
 
+
+/* parlör */
+.p-tools { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+.p-jump { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; }
+.p-sec { display: grid; gap: 12px; scroll-margin-top: 120px; }
+.p-sec h2 { font-size: 22px; }
+.p-sec h3 { font-size: 17px; margin-top: 6px; }
+.p-table { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden; }
+.p-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr); gap: 4px 16px; padding: 10px 14px; border-top: 1px solid var(--line); align-items: baseline; }
+.p-row:first-child { border-top: 0; }
+.p-row.p-head { background: var(--sunk); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding-block: 7px; }
+.p-row .mn { font-size: 18px; overflow-wrap: anywhere; }
+.p-row .ut { font-family: var(--mono); font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.p-row .sv { overflow-wrap: anywhere; }
+.p-tip { font-size: 14px; color: var(--muted); border-left: 2px solid var(--accent); padding-left: 12px; max-width: 70ch; }
+.p-list { margin: 0; padding-left: 20px; display: grid; gap: 4px; color: var(--ink); max-width: 70ch; }
+.p-test .p-row:not(.p-head) .hideable { filter: blur(6px); cursor: pointer; user-select: none; }
+.p-test .p-row.show .hideable { filter: none; }
+@media (max-width: 640px) {
+  .p-tools { grid-template-columns: 1fr; }
+  .p-row { grid-template-columns: 1fr; gap: 2px; }
+  .p-row.p-head { display: none; }
+  .p-row .sv { font-size: 13px; color: var(--muted); order: 3; }
+}
+
 @media (max-width: 760px) {
   .verb-layout, .grid2, .vocab-tools { grid-template-columns: 1fr; }
   .verb-list { max-height: none; grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; }
@@ -242,6 +267,7 @@ textarea { width: 100%; font-family: var(--mono); font-size: 13px; }
     </div>
     <nav class="tabs" role="tablist" id="tabs">
       <button class="tab" role="tab" data-tab="ord" aria-selected="true">Ordbok</button>
+      <button class="tab" role="tab" data-tab="parlor">Parlör</button>
       <button class="tab" role="tab" data-tab="verb">Verb &amp; tider</button>
       <button class="tab" role="tab" data-tab="meningar">Meningar</button>
       <button class="tab" role="tab" data-tab="ova">Öva</button>
@@ -265,6 +291,22 @@ textarea { width: 100%; font-family: var(--mono); font-size: 13px; }
     </div>
     <div class="count" id="count"></div>
     <div class="words" id="words"></div>
+  </section>
+
+
+  <!-- PARLÖR -->
+  <section class="view" id="view-parlor" hidden>
+    <div class="head">
+      <span class="eyebrow">Parlör för resan</span>
+      <h1>Viktiga mongoliska fraser för turister</h1>
+      <p class="lede">Fraser för hälsningar, mat, shopping, transport, boende och nödsituationer. Uttalet är skrivet för svenskar.</p>
+    </div>
+    <div class="p-tools">
+      <input type="search" id="p-search" placeholder="Sök fras på svenska eller mongoliska">
+      <label class="note"><input type="checkbox" id="p-test"> Testa mig: dölj mongoliskan</label>
+    </div>
+    <div class="p-jump" id="p-jump"></div>
+    <div id="p-body" style="display:grid;gap:32px"></div>
   </section>
 
   <!-- VERB -->
@@ -594,7 +636,7 @@ const TENSES = {alla:"Alla", vana:"Vana", pag:"Pågår nu", dat:"Dåtid", fram:"
 const ALPHA = [
   ["А","a"],["Б","b"],["В","v, ofta som w"],["Г","g"],["Д","d"],["Е","je / jö"],["Ё","jo"],["Ж","dj, som eng. j",1],["З","dz",1],
   ["И","i"],["Й","kort i"],["К","k (lånord)"],["Л","tonlöst l",1],["М","m"],["Н","n"],["О","å, öppet o"],["Ө","ö",1],["П","p (lånord)"],
-  ["Р","rullande r"],["С","s"],["Т","t"],["У","o, som i ost",1],["Ү","u, som svenskt u",1],["Ф","f (lånord)"],["Х","ch, som tyskt ach",1],
+  ["Р","rullande r"],["С","s"],["Т","t"],["У","å, som svenskt å",1],["Ү","som o i ”bo”",1],["Ф","f (lånord)"],["Х","ch, som tyskt ach",1],
   ["Ц","ts"],["Ч","tj"],["Ш","sj"],["Щ","sjtj (lånord)"],["Ъ","hårt tecken"],["Ы","ii efter hård konsonant"],["Ь","mjukt tecken, kort i"],
   ["Э","e, som ä"],["Ю","ju"],["Я","ja"]
 ];
@@ -647,7 +689,7 @@ if ("speechSynthesis" in window) { speechSynthesis.onvoiceschanged = findVoice; 
 function speak(t) { if (!mnVoice) return; const u = new SpeechSynthesisUtterance(t); u.voice = mnVoice; u.lang = mnVoice.lang; speechSynthesis.cancel(); speechSynthesis.speak(u); }
 
 /* ============ TABS ============ */
-const views = ["ord","verb","meningar","ova","alfabet","nya"];
+const views = ["ord","parlor","verb","meningar","ova","alfabet","nya"];
 function showTab(id) {
   if (!views.includes(id)) id = "ord";
   document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === id));
@@ -971,6 +1013,44 @@ $("#gen-save").addEventListener("click", async () => {
   $("#gen-save").disabled = false;
   if (n) { $("#gen-list").hidden = true; $("#gen-save").hidden = true; $("#gen-status").textContent = `${n} ord sparade i ordboken.`; addXp(n); }
 });
+
+
+/* ============ PARLÖR ============ */
+const PHRASES = [{"id": "uttal", "title": "Uttal", "intro": "Uttalet i parlören är skrivet för svenskar. Dubbla vokaler (аа, үү, оо) uttalas långt. Uttalen är förenklade, så lyssna gärna på hur lokalbefolkningen säger orden.", "key": [["х", "kh", "hårt h, som tyskt ”Bach”"], ["ш", "sh", "engelskt ”she”"], ["ч", "ch", "engelskt ”church”"], ["ж", "dj", "engelskt ”jam”"], ["з", "dz", "”ds” i ”gods”"], ["ц", "ts", "”ts” i ”katts”"], ["у", "å", "svenskt å"], ["ү", "ü", "svenskt o i ”bo”"], ["ө", "ö", "svenskt ö"], ["э", "e", "svenskt e"], ["л", "l", "l med luft, som walesiskt ”ll”"]]}, {"id": "halsa", "title": "Hälsningar och artighet", "intro": "Сайн байна уу? är den viktigaste frasen. Den fungerar som ”hej” i alla situationer.", "rows": [["Hej (artigt, fungerar alltid)", "Сайн байна уу?", "sajn bajn åå?"], ["Svar på hälsningen", "Сайн, сайн байна уу?", "sajn, sajn bajn åå?"], ["Hej (till vän eller yngre)", "Сайн уу?", "sajn åå?"], ["Hej (till en grupp)", "Сайн байцгаана уу?", "sajn bajtsgaan åå?"], ["God morgon", "Өглөөний мэнд", "öglööni mend"], ["God kväll", "Оройн мэнд", "orojn mend"], ["Vad finns det för nytt? (vanlig följdfråga)", "Сонин сайхан юу байна?", "sonin sajkhan jå bajn?"], ["Allt är lugnt (standardsvar)", "Тайван байна", "tajvan bajn"], ["Hej då", "Баяртай", "bajartaj"], ["Vi ses senare", "Дараа уулзъя", "daraa åålzja"], ["Tack", "Баярлалаа", "bajarlalaa"], ["Tack så mycket", "Маш их баярлалаа", "mash ikh bajarlalaa"], ["Ingen orsak / Det är okej", "Зүгээр", "dzügeer"], ["Ursäkta / Förlåt", "Уучлаарай", "åå-tchlaaraj"], ["Ja", "Тийм", "tiim"], ["Nej", "Үгүй", "ügüj"], ["Okej", "За", "dza"], ["Snälla (jag ber dig)", "Гуйя", "gujja"], ["Trevligt att träffas", "Танилцсандаа таатай байна", "taniltssandaa taataj bajn"], ["Välkommen", "Тавтай морилно уу", "tavtaj morilno åå"], ["Lycka till", "Амжилт хүсье", "amdjilt khüsje"], ["Skål!", "Төлөө!", "tölöö!"]], "after": "Mongoliskan har inget exakt ord för ”snälla”. Artigheten ligger i tonen och i verbändelser som …өгөөч (ge mig, tack)."}, {"id": "smaprat", "title": "Presentera sig och småprat", "intro": "Mongoler frågar gärna var du kommer ifrån, så de här fraserna används ofta.", "rows": [["Vad heter du?", "Таны нэр хэн бэ?", "tani ner khen be?"], ["Jag heter …", "Миний нэрийг … гэдэг", "mini nerijg … gedeg"], ["Var kommer du ifrån?", "Та хаанаас ирсэн бэ?", "ta khaanaas irsen be?"], ["Jag kommer från Sverige", "Би Шведээс ирсэн", "bi shvedees irsen"], ["Jag är svensk", "Би швед хүн", "bi shved khün"], ["Jag är turist", "Би жуулчин", "bi djååltchin"], ["Jag är här på semester", "Би амралтаараа ирсэн", "bi amraltaaraa irsen"], ["Mongoliet är vackert", "Монгол орон үзэсгэлэнтэй", "mongol oron üzesgelentej"]]}, {"id": "forsta", "title": "När ni inte förstår varandra", "intro": "Utanför Ulaanbaatar pratar få engelska, så det här avsnittet är extra viktigt på landsbygden.", "rows": [["Jag förstår inte", "Би ойлгохгүй байна", "bi ojlgokhgüj bajn"], ["Jag förstår", "Ойлголоо", "ojlgoloo"], ["Pratar du engelska?", "Та англиар ярьдаг уу?", "ta angliar jaridag åå?"], ["Jag pratar inte mongoliska", "Би монголоор ярьдаггүй", "bi mongoloor jaridaggüj"], ["Jag pratar lite mongoliska", "Би жаахан монголоор ярьдаг", "bi djaakhan mongoloor jaridag"], ["Säg det igen, tack", "Дахиад хэлээч", "dakhiad kheleetch"], ["Prata långsammare, tack", "Удаан ярина уу", "ådaan jarina åå"], ["Vad heter det här på mongoliska?", "Үүнийг монголоор юу гэдэг вэ?", "üünijg mongoloor jå gedeg ve?"], ["Vad betyder det?", "Энэ юу гэсэн үг вэ?", "ene jå gesen üg ve?"], ["Kan du skriva det?", "Бичээд өгөөч", "bicheed ögöötch"]]}, {"id": "siffror", "title": "Siffror", "intro": "Priser i tögrög (₮, MNT) går ofta på tusentals, så skriv gärna summan på mobilen för att undvika missförstånd.", "rows": [["0", "тэг", "teg"], ["1", "нэг", "neg"], ["2", "хоёр", "khojor"], ["3", "гурав", "gårav"], ["4", "дөрөв", "dörv"], ["5", "тав", "tav"], ["6", "зургаа", "dzårgaa"], ["7", "долоо", "doloo"], ["8", "найм", "najm"], ["9", "ес", "jes"], ["10", "арав", "arav"], ["15", "арван тав", "arvan tav"], ["20", "хорь", "khori"], ["50", "тавь", "tavi"], ["100", "зуу", "dzåå"], ["500", "таван зуу", "tavan dzåå"], ["1 000", "мянга", "mjanga"], ["10 000", "арван мянга", "arvan mjanga"]]}, {"id": "shopping", "title": "Shopping och pengar", "intro": "Kort fungerar i städerna, men på landsbygden behövs kontanter. Prutning är vanligt på marknader men inte i vanliga butiker.", "rows": [["Hur mycket kostar det här?", "Энэ ямар үнэтэй вэ?", "ene jamar ünetej ve?"], ["Hur mycket?", "Хэд вэ?", "khed ve?"], ["Det är för dyrt", "Хэтэрхий үнэтэй байна", "kheterkhij ünetej bajn"], ["Kan du sänka priset?", "Хямдруулж болох уу?", "khjamdrååldj bolokh åå?"], ["Jag tar den här", "Би үүнийг авъя", "bi üünijg avja"], ["Jag tittar bara", "Би зүгээр үзэж байна", "bi dzügeer üzedj bajn"], ["Har ni …?", "… байна уу?", "… bajn åå?"], ["Kan jag betala med kort?", "Картаар төлж болох уу?", "kartaar töldj bolokh åå?"], ["Kontanter", "Бэлэн мөнгө", "belen möng"], ["Var finns en bankomat?", "ATM хаана байна вэ?", "ATM khaana bajn ve?"], ["Kvitto, tack", "Баримт өгөөч", "barimt ögöötch"], ["Marknad", "Зах", "dzakh"]]}, {"id": "mat", "title": "Mat, dryck och restaurang", "intro": "Mongolisk mat bygger mycket på kött och mejeriprodukter, så vegetarianer bör lära sig frasen om kött utan till. Drick kokt eller köpt vatten, inte kranvatten.", "rows": [["Jag är hungrig", "Би өлсөж байна", "bi ölsödj bajn"], ["Menyn, tack", "Цэс өгөөч", "tses ögöötch"], ["Vad rekommenderar du?", "Та юу санал болгох вэ?", "ta jå sanal bolgokh ve?"], ["Jag vill ha …", "Би … авъя", "bi … avja"], ["Jag äter inte kött", "Би мах иддэггүй", "bi makh iddeggüj"], ["Jag är allergisk mot …", "Би …-д харшилтай", "bi …-d kharshiltaj"], ["Utan socker", "Чихэргүй", "tchikhergüj"], ["Det är mycket gott", "Маш амттай байна", "mash amttaj bajn"], ["Notan, tack", "Тооцоо бодоод өгөөч", "tootsoo bodood ögöötch"]], "sub": [{"title": "Viktiga ord", "rows": [["Vatten", "ус", "ås"], ["Kokt vatten", "буцалсан ус", "båtsalsan ås"], ["Te", "цай", "tsaj"], ["Mjölkte (salt, vanligast)", "сүүтэй цай", "süütej tsaj"], ["Kaffe", "кофе", "kofe"], ["Öl", "пиво", "piva"], ["Vodka", "архи", "arkhi"], ["Kött", "мах", "makh"], ["Fårkött", "хонины мах", "khonini makh"], ["Nötkött", "үхрийн мах", "ükhrijn makh"], ["Kyckling", "тахианы мах", "takhiani makh"], ["Fisk", "загас", "dzagas"], ["Ris", "будаа", "bådaa"], ["Grönsaker", "ногоо", "nogoo"], ["Bröd", "талх", "talkh"], ["Ägg", "өндөг", "öndög"], ["Salt", "давс", "davs"]]}, {"title": "Rätter att prova", "cols": ["Rätt", "Mongoliska", "Vad det är"], "rows": [["Buuz", "бууз", "ångkokta köttknyten"], ["Khuushuur", "хуушуур", "friterade köttpiroger"], ["Tsujvan", "цуйван", "stekta nudlar med kött"], ["Khorkhog", "хорхог", "kött som kokas med heta stenar"], ["Airag", "айраг", "jäst stomjölk, lätt alkoholhaltig"]]}]}, {"id": "transport", "title": "Transport och vägbeskrivning", "intro": "Sätt platsens namn före frågeordet: зочид буудал хаана байна вэ? betyder ”var ligger hotellet?”. Ha gärna adressen till boendet skriven på mongoliska.", "rows": [["Var ligger …?", "… хаана байна вэ?", "… khaana bajn ve?"], ["Kör mig till …, tack", "… руу явъя", "… råå javja"], ["Hur långt är det?", "Хэр хол вэ?", "kher khol ve?"], ["Hur lång tid tar det?", "Хэр удаан явах вэ?", "kher ådaan javakh ve?"], ["En biljett till …", "… руу нэг тасалбар", "… råå neg tasalbar"], ["Stanna här", "Энд зогсоорой", "end dzogsooroj"], ["Vänster", "Зүүн", "dzüün"], ["Höger", "Баруун", "baråån"], ["Rakt fram", "Чигээрээ", "tchigeeree"], ["Hotell", "Зочид буудал", "dzotchid båådal"], ["Flygplats", "Нисэх онгоцны буудал", "nisekh ongotsni båådal"], ["Tågstation", "Галт тэрэгний буудал", "galt teregnij båådal"], ["Busshållplats", "Автобусны буудал", "avtobusni båådal"], ["Taxi", "Такси", "taksi"]], "after": "Зүүн betyder också öster och баруун väster. Efter ord med e-, ö- eller ü-ljud blir руу i stället рүү (rüü)."}, {"id": "boende", "title": "Boende och ger-läger", "intro": "I ger-läger är varmvatten, el och wifi inte självklart, så fråga när du checkar in.", "rows": [["Har ni ett ledigt rum?", "Сул өрөө байна уу?", "sål öröö bajn åå?"], ["Jag har en bokning", "Би захиалсан", "bi dzakhialsan"], ["För en natt", "Нэг шөнө", "neg shönö"], ["För två nätter", "Хоёр шөнө", "khojor shönö"], ["Hur mycket kostar en natt?", "Нэг шөнө ямар үнэтэй вэ?", "neg shönö jamar ünetej ve?"], ["Finns det wifi?", "Wi-Fi байна уу?", "wajfaj bajn åå?"], ["Vad är wifi-lösenordet?", "Wi-Fi-н нууц үг юу вэ?", "wajfajn nååts üg jå ve?"], ["Finns det varmvatten?", "Халуун ус байна уу?", "khalåån ås bajn åå?"], ["Det är kallt", "Хүйтэн байна", "khüjten bajn"], ["Ger (jurta)", "Гэр", "ger"], ["Dusch", "Шүршүүр", "shürshüür"], ["Nyckel", "Түлхүүр", "tülkhüür"], ["Ved", "Түлээ", "tülee"], ["Filt", "Хөнжил", "khöndjil"]]}, {"id": "nod", "title": "Nödsituationer och hälsa", "intro": "Nödnumren i Mongoliet är 102 (polis), 103 (ambulans) och 101 (brand). Dubbelkolla dem före resan. Sverige har ingen ambassad i Ulaanbaatar, så kolla på swedenabroad.se vilken ambassad som ansvarar för Mongoliet.", "rows": [["Hjälp!", "Туслаарай!", "tåslaaraj!"], ["Ring polisen!", "Цагдаа дуудаарай!", "tsagdaa dåådaaraj!"], ["Ring en ambulans!", "Түргэн тусламж дуудаарай!", "türgen tåslamdj dåådaaraj!"], ["Akta dig!", "Болгоомжтой!", "bolgoomdjtoj!"], ["Jag behöver en läkare", "Надад эмч хэрэгтэй", "nadad emtch kheregtej"], ["Jag är sjuk", "Би өвчтэй байна", "bi övtchtej bajn"], ["Det gör ont här", "Энд өвдөж байна", "end övdödj bajn"], ["Jag har gått vilse", "Би төөрчихлөө", "bi töörtchikhlöö"], ["Mitt pass har blivit stulet", "Миний паспорт хулгайд алдагдсан", "mini pasport khålgajd aldagdsan"], ["Var är toaletten?", "Жорлон хаана байна вэ?", "djorlon khaana bajn ve?"], ["Sjukhus", "Эмнэлэг", "emneleg"], ["Apotek", "Эмийн сан", "emijn san"], ["Polis", "Цагдаа", "tsagdaa"]]}, {"id": "tid", "title": "Tid och dagar", "rows": [["Vad är klockan?", "Хэдэн цаг болж байна?", "kheden tsag boldj bajn?"], ["När?", "Хэзээ?", "khedzee?"], ["Nu", "Одоо", "odoo"], ["Senare", "Дараа", "daraa"], ["Idag", "Өнөөдөр", "önöödör"], ["Imorgon", "Маргааш", "margaash"], ["Igår", "Өчигдөр", "ötchigdör"], ["Morgon", "Өглөө", "öglöö"], ["Kväll", "Орой", "oroj"], ["Natt", "Шөнө", "shönö"], ["Timme", "Цаг", "tsag"], ["Måndag", "Даваа", "davaa"], ["Tisdag", "Мягмар", "mjagmar"], ["Onsdag", "Лхагва", "lkhagva"], ["Torsdag", "Пүрэв", "pürev"], ["Fredag", "Баасан", "baasan"], ["Lördag", "Бямба", "bjamba"], ["Söndag", "Ням", "njam"]]}, {"id": "kultur", "title": "Kultur och etikett i en ger", "intro": "Ropa ”Håll hunden!” när du närmar dig en ger på landsbygden, och vänta tills någon kommer ut.", "rows": [["Håll hunden!", "Нохой хорио!", "nokhoj khorio!"], ["Får jag ta en bild?", "Зураг авч болох уу?", "dzårag avtch bolokh åå?"], ["Det var mycket gott (tack för maten)", "Маш амттай байлаа", "mash amttaj bajlaa"]], "list": ["Ta emot och ge saker med höger hand, eller med båda händerna.", "Kliv över tröskeln, aldrig på den.", "Gå medsols inne i ger och luta dig inte mot de två mittstolparna.", "Peka inte med fötterna mot härden eller husaltaret längst in.", "Rör inte någons huvud eller hatt.", "Om du råkar nudda någons fot med din, skaka hand direkt.", "Smaka alltid lite av det du bjuds på. Du behöver inte äta eller dricka upp."]}];
+function pTable(rows, cols) {
+  cols = cols || ["Svenska", "Mongoliska", "Uttal"];
+  return `<div class="p-table"><div class="p-row p-head"><span>${cols[0]}</span><span>${cols[1]}</span><span>${cols[2]}</span></div>` +
+    rows.map(r => `<div class="p-row"><span class="sv">${esc(r[0])}</span><span class="mn hideable">${esc(r[1])}</span><span class="ut hideable">${esc(r[2])}</span></div>`).join("") + `</div>`;
+}
+function renderParlor() {
+  const q = norm($("#p-search").value);
+  const match = r => !q || r.some(c => norm(c).includes(q));
+  let html = "", hits = 0;
+  for (const s of PHRASES) {
+    if (s.key) {
+      if (q) continue;
+      html += `<div class="p-sec" id="p-${s.id}"><h2>${esc(s.title)}</h2><p class="p-tip">${esc(s.intro)}</p><div class="p-table"><div class="p-row p-head"><span>Bokstav</span><span>I parlören</span><span>Låter ungefär som</span></div>` +
+        s.key.map(k => `<div class="p-row"><span class="mn">${esc(k[0])}</span><span class="ut">${esc(k[1])}</span><span class="sv">${esc(k[2])}</span></div>`).join("") + `</div></div>`;
+      continue;
+    }
+    const rows = (s.rows || []).filter(match), subs = (s.sub || []).map(x => ({...x, rows: x.rows.filter(match)})).filter(x => x.rows.length);
+    if (q && !rows.length && !subs.length) continue;
+    hits += rows.length + subs.reduce((a, x) => a + x.rows.length, 0);
+    html += `<div class="p-sec" id="p-${s.id}"><h2>${esc(s.title)}</h2>${s.intro && !q ? `<p class="p-tip">${esc(s.intro)}</p>` : ""}` +
+      (rows.length ? pTable(rows) : "") +
+      subs.map(x => `<h3>${esc(x.title)}</h3>${pTable(x.rows, x.cols)}`).join("") +
+      (s.after && !q ? `<p class="p-tip">${esc(s.after)}</p>` : "") +
+      (s.list && !q ? `<ul class="p-list">${s.list.map(l => `<li>${esc(l)}</li>`).join("")}</ul>` : "") + `</div>`;
+  }
+  $("#p-body").innerHTML = html || `<p class="note">Ingen fras matchar. Prova ett annat ord.</p>`;
+  $("#p-jump").hidden = !!q;
+}
+$("#p-jump").innerHTML = PHRASES.map(s => `<button class="chip" data-jump="${s.id}">${esc(s.title)}</button>`).join("");
+$("#p-jump").addEventListener("click", e => { const b = e.target.closest("[data-jump]"); if (b) document.getElementById("p-" + b.dataset.jump)?.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); });
+$("#p-search").addEventListener("input", renderParlor);
+$("#p-test").addEventListener("change", e => { $("#p-body").classList.toggle("p-test", e.target.checked); document.querySelectorAll(".p-row.show").forEach(r => r.classList.remove("show")); });
+$("#p-body").addEventListener("click", e => { if (!$("#p-test").checked) return; const r = e.target.closest(".p-row:not(.p-head)"); if (r && !r.classList.contains("show")) { r.classList.add("show"); addXp(1); } });
+renderParlor();
 
 /* ============ INIT ============ */
 renderCats(); renderWords(); renderVerb(); newTenseQuiz(); renderTenseFilter(); startBuilder(); renderOwn();
