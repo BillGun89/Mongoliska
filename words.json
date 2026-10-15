@@ -1,0 +1,1362 @@
+[
+  {
+    "mn": "Дээл",
+    "sv": "Deel, traditionell mongolisk dräkt",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Малгай",
+    "sv": "Mössa / hatt",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Гутал",
+    "sv": "Skor / stövlar",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Цамц",
+    "sv": "Skjorta / tröja",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Өмд",
+    "sv": "Byxor",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Хүрэм",
+    "sv": "Jacka",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Даашинз",
+    "sv": "Klänning",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Оймс",
+    "sv": "Strumpor",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Бээлий",
+    "sv": "Vantar / handskar",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Ороолт",
+    "sv": "Halsduk",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Бүс",
+    "sv": "Bälte",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Гунигтай",
+    "sv": "Ledsen",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Уурласан",
+    "sv": "Arg",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Айсан",
+    "sv": "Rädd",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Ичсэн",
+    "sv": "Generad",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Гайхсан",
+    "sv": "Förvånad",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Тайван",
+    "sv": "Lugn",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Хайр",
+    "sv": "Kärlek",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Би чамд хайртай",
+    "sv": "Jag älskar dig",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Би чамайг санаж байна",
+    "sv": "Jag saknar dig",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Үүл",
+    "sv": "Moln",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Нартай",
+    "sv": "Soligt",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Бороотой",
+    "sv": "Regnigt",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Цастай",
+    "sv": "Snöigt",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Салхитай",
+    "sv": "Blåsigt",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Мөндөр",
+    "sv": "Hagel",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Аянга",
+    "sv": "Åska / blixt",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Солонго",
+    "sv": "Regnbåge",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Цэс",
+    "sv": "Meny",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Тооцоо",
+    "sv": "Notan",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Халбага",
+    "sv": "Sked",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Сэрээ",
+    "sv": "Gaffel",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Хутга",
+    "sv": "Kniv",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Таваг",
+    "sv": "Tallrik",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Гоймон",
+    "sv": "Nudlar / pasta",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Амттан",
+    "sv": "Efterrätt",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Жүүс",
+    "sv": "Juice",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Шар айраг",
+    "sv": "Öl",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Дарс",
+    "sv": "Vin",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Сайхан хооллоорой",
+    "sv": "Smaklig måltid",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Банк",
+    "sv": "Bank",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Эмийн сан",
+    "sv": "Apotek",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Шуудан",
+    "sv": "Post",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Номын сан",
+    "sv": "Bibliotek",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Талбай",
+    "sv": "Torg",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Музей",
+    "sv": "Museum",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Маш сайн",
+    "sv": "Mycket bra",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Би мэдэхгүй",
+    "sv": "Jag vet inte",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Хаана байна вэ?",
+    "sv": "Var är det?",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Битгий санаа зов",
+    "sv": "Oroa dig inte",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Амжилт хүсье",
+    "sv": "Lycka till",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Төрсөн өдрийн мэнд хүргэе",
+    "sv": "Grattis på födelsedagen",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Тусламж!",
+    "sv": "Hjälp!",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Зүгээр, зүгээр",
+    "sv": "Det gör inget",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Эцэг эх",
+    "sv": "Föräldrar",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Ач",
+    "sv": "Barnbarn",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Авга ах",
+    "sv": "Farbror",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Нагац ах",
+    "sv": "Morbror",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Авга эгч",
+    "sv": "Faster",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Нагац эгч",
+    "sv": "Moster",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Ач охин",
+    "sv": "Barnbarn (flicka)",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Ач хүү",
+    "sv": "Barnbarn (pojke)",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Айл",
+    "sv": "Hushåll / familj",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Гэрлэсэн",
+    "sv": "Gift",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Ганц бие",
+    "sv": "Singel",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Хөрш",
+    "sv": "Granne",
+    "cat": "Familj"
+  },
+  {
+    "mn": "Өглөөний цай",
+    "sv": "Frukost",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Өдрийн хоол",
+    "sv": "Lunch",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Оройн хоол",
+    "sv": "Middag",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Тараг",
+    "sv": "Yoghurt",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Ааруул",
+    "sv": "Torkad ostmassa",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Боорцог",
+    "sv": "Friterat bröd",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Гурил",
+    "sv": "Mjöl",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Элсэн чихэр",
+    "sv": "Socker",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Тос",
+    "sv": "Olja / fett",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Цөцгийн тос",
+    "sv": "Smör",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Сонгино",
+    "sv": "Lök",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Сармис",
+    "sv": "Vitlök",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Лууван",
+    "sv": "Morot",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Байцаа",
+    "sv": "Kål",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Өргөст хэмх",
+    "sv": "Gurka",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Улаан лооль",
+    "sv": "Tomat",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Банана",
+    "sv": "Banan",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Жүрж",
+    "sv": "Apelsin",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Тарвас",
+    "sv": "Vattenmelon",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Гадил",
+    "sv": "Banan",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Зөгийн бал",
+    "sv": "Honung",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Халуун ногоо",
+    "sv": "Stark krydda",
+    "cat": "Mat & dryck"
+  },
+  {
+    "mn": "Туулай",
+    "sv": "Kanin / hare",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Хулгана",
+    "sv": "Mus",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Могой",
+    "sv": "Orm",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Мэлхий",
+    "sv": "Groda",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Арслан",
+    "sv": "Lejon",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Бар",
+    "sv": "Tiger",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Заан",
+    "sv": "Elefant",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Хандгай",
+    "sv": "Älg",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Буга",
+    "sv": "Hjort",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Хэрэм",
+    "sv": "Ekorre",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Зөгий",
+    "sv": "Bi",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Эрвээхэй",
+    "sv": "Fjäril",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Шоргоолж",
+    "sv": "Myra",
+    "cat": "Djur"
+  },
+  {
+    "mn": "Газар",
+    "sv": "Mark / jord",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Дэлхий",
+    "sv": "Världen / jorden",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Далай",
+    "sv": "Hav",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Ой",
+    "sv": "Skog",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Өвс",
+    "sv": "Gräs",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Навч",
+    "sv": "Löv / blad",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Элс",
+    "sv": "Sand",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Чулуу",
+    "sv": "Sten",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Агаар",
+    "sv": "Luft",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Цаг агаар",
+    "sv": "Väder",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Шуурга",
+    "sv": "Storm",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Манан",
+    "sv": "Dimma",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Сүүдэр",
+    "sv": "Skugga",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Хавар",
+    "sv": "Vår",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Зун",
+    "sv": "Sommar",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Намар",
+    "sv": "Höst",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Өвөл",
+    "sv": "Vinter",
+    "cat": "Natur & väder"
+  },
+  {
+    "mn": "Хуруу",
+    "sv": "Finger",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Хөлийн хуруу",
+    "sv": "Tå",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Өвдөг",
+    "sv": "Knä",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Мөр",
+    "sv": "Axel",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Хүзүү",
+    "sv": "Hals / nacke",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Нуруу",
+    "sv": "Rygg",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Хэвлий",
+    "sv": "Mage / buk",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Хэл",
+    "sv": "Tunga / språk",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Уруул",
+    "sv": "Läpp",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Хөмсөг",
+    "sv": "Ögonbryn",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Арьс",
+    "sv": "Hud",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Цус",
+    "sv": "Blod",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Яс",
+    "sv": "Ben (skelett)",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Эрүүл мэнд",
+    "sv": "Hälsa",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Өвчтэй",
+    "sv": "Sjuk",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Эрүүл",
+    "sv": "Frisk",
+    "cat": "Kroppen"
+  },
+  {
+    "mn": "Гал тогоо",
+    "sv": "Kök",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Угаалгын өрөө",
+    "sv": "Badrum",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Зочны өрөө",
+    "sv": "Vardagsrum",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Унтлагын өрөө",
+    "sv": "Sovrum",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Шал",
+    "sv": "Golv",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Тааз",
+    "sv": "Tak (inomhus)",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Дээвэр",
+    "sv": "Tak (på hus)",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Хана",
+    "sv": "Vägg",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Гэрэл",
+    "sv": "Ljus / lampa",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Чийдэн",
+    "sv": "Glödlampa",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Компьютер",
+    "sv": "Dator",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Зурагт",
+    "sv": "TV",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Хөргөгч",
+    "sv": "Kylskåp",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Зуух",
+    "sv": "Spis / ugn",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Толь",
+    "sv": "Spegel",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Алчуур",
+    "sv": "Handduk",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Саван",
+    "sv": "Tvål",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Дэр",
+    "sv": "Kudde",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Хөнжил",
+    "sv": "Täcke / filt",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Хог",
+    "sv": "Skräp",
+    "cat": "Hemma"
+  },
+  {
+    "mn": "Минут",
+    "sv": "Minut",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Секунд",
+    "sv": "Sekund",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Сар бүр",
+    "sv": "Varje månad",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Өнгөрсөн долоо хоног",
+    "sv": "Förra veckan",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Ирэх долоо хоног",
+    "sv": "Nästa vecka",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Дараа",
+    "sv": "Senare / efteråt",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Өмнө",
+    "sv": "Före / tidigare",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Эрт",
+    "sv": "Tidigt",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Оройтсон",
+    "sv": "Försenad",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Үргэлж",
+    "sv": "Alltid",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Заримдаа",
+    "sv": "Ibland",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Хэзээ ч",
+    "sv": "Aldrig / någonsin",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Ихэвчлэн",
+    "sv": "Oftast",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Байнга",
+    "sv": "Ofta / ständigt",
+    "cat": "Tid"
+  },
+  {
+    "mn": "Алтан шар",
+    "sv": "Guldfärgad",
+    "cat": "Färger"
+  },
+  {
+    "mn": "Хүрэн",
+    "sv": "Mörkbrun",
+    "cat": "Färger"
+  },
+  {
+    "mn": "Нил ягаан",
+    "sv": "Lila",
+    "cat": "Färger"
+  },
+  {
+    "mn": "Аз жаргалтай",
+    "sv": "Lycklig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Ухаантай",
+    "sv": "Smart",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Сонирхолтой",
+    "sv": "Intressant",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Уйтгартай",
+    "sv": "Tråkig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хөөрхөн",
+    "sv": "Söt / gullig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Үнэтэй",
+    "sv": "Dyr",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хямд",
+    "sv": "Billig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Цэвэр",
+    "sv": "Ren",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Бохир",
+    "sv": "Smutsig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Ойр",
+    "sv": "Nära",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хол",
+    "sv": "Långt bort",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хүнд",
+    "sv": "Tung / svår",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хөнгөн",
+    "sv": "Lätt (vikt)",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Нээлттэй",
+    "sv": "Öppen",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Хаалттай",
+    "sv": "Stängd",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Зөв",
+    "sv": "Rätt / korrekt",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Буруу",
+    "sv": "Fel / oriktig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Чухал",
+    "sv": "Viktig",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Дуртай",
+    "sv": "Tycker om",
+    "cat": "Adjektiv"
+  },
+  {
+    "mn": "Нисэх буудал",
+    "sv": "Flygplats",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Буудал",
+    "sv": "Station / hållplats",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Гүүр",
+    "sv": "Bro",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Зах",
+    "sv": "Marknad",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Цэцэрлэгт хүрээлэн",
+    "sv": "Park",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Цагдаагийн газар",
+    "sv": "Polisstation",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Ресторан",
+    "sv": "Restaurang",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Кафе",
+    "sv": "Café",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Кино театр",
+    "sv": "Biograf",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Театр",
+    "sv": "Teater",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Цэнгэлдэх хүрээлэн",
+    "sv": "Stadion",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Уулзвар",
+    "sv": "Korsning",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Зогсоол",
+    "sv": "Parkering / hållplats",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Дугуй",
+    "sv": "Cykel / hjul",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Такси",
+    "sv": "Taxi",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Тасалбар",
+    "sv": "Biljett",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Газрын зураг",
+    "sv": "Karta",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Гадаад улс",
+    "sv": "Främmande land",
+    "cat": "Platser & resor"
+  },
+  {
+    "mn": "Дэвтэр",
+    "sv": "Anteckningsbok",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Үзэг",
+    "sv": "Penna",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Харандаа",
+    "sv": "Blyertspenna",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Баллуур",
+    "sv": "Suddgummi",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Самбар",
+    "sv": "Tavla",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Ангийн өрөө",
+    "sv": "Klassrum",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Шалгалт",
+    "sv": "Prov / examen",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Дүн",
+    "sv": "Betyg",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Хичээл",
+    "sv": "Lektion / ämne",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Завсарлага",
+    "sv": "Rast",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Их сургууль",
+    "sv": "Universitet",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Судалгаа",
+    "sv": "Forskning",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Хариулт",
+    "sv": "Svar",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Асуулт",
+    "sv": "Fråga",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Төсөл",
+    "sv": "Projekt",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Зураг",
+    "sv": "Bild / teckning",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Камер",
+    "sv": "Kamera",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Зурагчин",
+    "sv": "Fotograf",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Программ",
+    "sv": "Program",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Вэбсайт",
+    "sv": "Webbplats",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Интернэт",
+    "sv": "Internet",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Имэйл",
+    "sv": "E-post",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Нууц үг",
+    "sv": "Lösenord",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Ажлын байр",
+    "sv": "Arbetsplats",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Уулзалт",
+    "sv": "Möte",
+    "cat": "Skola & arbete"
+  },
+  {
+    "mn": "Спорт гутал",
+    "sv": "Gympaskor",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Шаахай",
+    "sv": "Tofflor",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Пальто",
+    "sv": "Kappa",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Майк",
+    "sv": "Linne / T-shirt",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Богино өмд",
+    "sv": "Shorts",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Цүнх",
+    "sv": "Väska",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Нүдний шил",
+    "sv": "Glasögon",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Бугуйн цаг",
+    "sv": "Armbandsur",
+    "cat": "Kläder"
+  },
+  {
+    "mn": "Сэтгэл",
+    "sv": "Känsla / själ",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Баярласан",
+    "sv": "Glad",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Санаа зовсон",
+    "sv": "Orolig",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Сэтгэл хангалуун",
+    "sv": "Nöjd",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Итгэлтэй",
+    "sv": "Självsäker",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Ганцаардсан",
+    "sv": "Ensam",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Ядруу",
+    "sv": "Utmattad",
+    "cat": "Känslor"
+  },
+  {
+    "mn": "Захиалга",
+    "sv": "Beställning",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Зөөгч",
+    "sv": "Servitör",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Зочин",
+    "sv": "Gäst",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Ширээ захиалах",
+    "sv": "Boka bord",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Амт",
+    "sv": "Smak",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Исгэлэн",
+    "sv": "Sur (smak)",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Гашуун",
+    "sv": "Besk",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Чихэрлэг",
+    "sv": "Söt (smak)",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Халуун ногоотой",
+    "sv": "Starkt kryddad",
+    "cat": "På restaurangen"
+  },
+  {
+    "mn": "Хэний",
+    "sv": "Vems",
+    "cat": "Frågeord"
+  },
+  {
+    "mn": "Хаашаа",
+    "sv": "Vart",
+    "cat": "Frågeord"
+  },
+  {
+    "mn": "Хаанаас",
+    "sv": "Varifrån",
+    "cat": "Frågeord"
+  },
+  {
+    "mn": "Хэдэн",
+    "sv": "Hur många (före substantiv)",
+    "cat": "Frågeord"
+  },
+  {
+    "mn": "Хэрхэн",
+    "sv": "Hur (formellt)",
+    "cat": "Frågeord"
+  },
+  {
+    "mn": "Сайн байна",
+    "sv": "Jag mår bra",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Та сайн уу?",
+    "sv": "Hur mår du? (artigt)",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Дараа уулзъя",
+    "sv": "Vi ses senare",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Асуудалгүй",
+    "sv": "Inga problem",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Түр хүлээгээрэй",
+    "sv": "Vänta lite, tack",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Болно",
+    "sv": "Det går bra / möjligt",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Болохгүй",
+    "sv": "Det går inte / inte tillåtet",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Баяр хүргэе",
+    "sv": "Grattis",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Сайхан өдөр өнгөрүүлээрэй",
+    "sv": "Ha en fin dag",
+    "cat": "Fraser"
+  },
+  {
+    "mn": "Надад туслаач",
+    "sv": "Hjälp mig, tack",
+    "cat": "Fraser"
+  }
+]

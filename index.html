@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Lär dig mongoliska på svenska. Ordförråd, användbara fraser, grammatik och interaktiva övningar.">
+  <title>Mongolbota — Lär dig mongoliska</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Huvudmeny">
+      <a class="logo" href="#hem" aria-label="Mongolbota, till startsidan">
+        <span class="logo-mark" aria-hidden="true">м<span>.</span></span>
+        <span><strong>mongolbota</strong><small>МОНГОЛ ХЭЛ</small></span>
+      </a>
+      <p class="nav-caption">LÄRPLATTFORM</p>
+      <nav class="nav" id="nav">
+        <button data-page="hem" class="nav-link active"><span class="nav-ic">⌂</span> Översikt</button>
+        <button data-page="ord" class="nav-link"><span class="nav-ic">▦</span> Ordförråd</button>
+        <button data-page="ova" class="nav-link"><span class="nav-ic">◈</span> Övningar</button>
+        <button data-page="meningar" class="nav-link"><span class="nav-ic">☷</span> Bygg meningar</button>
+        <button data-page="verb" class="nav-link"><span class="nav-ic">∿</span> Verb & grammatik</button>
+        <button data-page="parlor" class="nav-link"><span class="nav-ic">❞</span> Parlör</button>
+        <button data-page="alfabet" class="nav-link"><span class="nav-ic">Аа</span> Alfabetet</button>
+      </nav>
+      <p class="nav-caption nav-caption-second">DIN ARBETSYTA</p>
+      <nav class="nav">
+        <button data-page="framsteg" class="nav-link"><span class="nav-ic">◷</span> Mina framsteg</button>
+        <button data-page="minaord" class="nav-link"><span class="nav-ic">＋</span> Egna ord</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-note"><span class="side-note-label">Dagens tanke</span><span class="side-note-mn">Алхам алхмаар</span><span>Steg för steg.</span></div>
+        <span class="edition">Mongolbota <span>•</span> Svenska → mongoliska</span>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="crumb"><span class="crumb-mobile">mongolbota</span><span id="current-location">Översikt</span><span class="crumb-soft">/ Lär dig mongoliska</span></div>
+        <div class="top-tools"><span class="top-stat" title="Din dagliga studieaktivitet"><span class="stat-dot"></span><strong id="top-streak">0</strong> dagar</span><span class="top-stat xp-label"><strong id="top-xp">0</strong> XP</span><button class="round-icon" id="theme-btn" title="Växla ljust och mörkt läge" aria-label="Växla färgtema">◐</button></div>
+      </header>
+      <main id="app-main">
+        <section class="page" id="page-hem">
+          <div class="hero">
+            <div class="hero-text"><span class="eyebrow hero-kicker"><span class="mini-line"></span> ETT SPRÅK. EN NY VÄRLD.</span><h1>Сайн байна уу<span class="hero-dot">.</span></h1><p class="hero-translation">Hej! Välkommen till din mongoliska.</p><p class="hero-desc">Lär dig nya ord, bygg meningar och hitta flytet — en liten stund varje dag.</p><div class="hero-actions"><button class="button dark" data-go="ova">Börja öva <span>↗</span></button><button class="button hero-secondary" data-go="ord">Utforska ordlistan <span>→</span></button></div></div>
+            <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="mount mountain-back"></div><div class="mount mountain-front"></div><div class="ground"></div><div class="hero-script">монгол<br>хэл<span>↗</span></div><div class="art-caption">Språket från den eviga blå himlen</div></div>
+          </div>
+          <div class="quick-stats" id="home-stats"></div>
+          <div class="section-row"><div><span class="eyebrow">FORTSÄTT HÄR</span><h2>Vad vill du lära dig idag?</h2></div><span class="section-hint">Små steg gör stor skillnad.</span></div>
+          <div class="learning-grid">
+            <button class="learning-card" data-go="ord"><span class="tile-number">01 / UPPTÄCK</span><span class="tile-symbol glyph">Үг</span><span class="tile-copy"><strong>Ordförråd</strong><span>Upptäck ord för alla situationer</span></span><span class="tile-arrow">↗</span></button>
+            <button class="learning-card" data-go="ova"><span class="tile-number">02 / TRÄNA</span><span class="tile-symbol">✳</span><span class="tile-copy"><strong>Övningar</strong><span>Kort, quiz, stavning och mer</span></span><span class="tile-arrow">↗</span></button>
+            <button class="learning-card" data-go="meningar"><span class="tile-number">03 / ANVÄND</span><span class="tile-symbol glyph">Би</span><span class="tile-copy"><strong>Bygg meningar</strong><span>Från enskilda ord till hela tankar</span></span><span class="tile-arrow">↗</span></button>
+          </div>
+          <div class="home-bottom"><div class="home-tip"><div><span class="eyebrow">SPRÅKTIPS</span><h3>Verbet kommer sist.</h3><p>I mongoliskan placeras verbet ofta i slutet av meningen. Börja med enkla meningar och bygg vidare.</p><button class="link-button" data-go="meningar">Träna ordföljd <span>→</span></button></div><div class="tip-example"><span>Би ном уншиж байна.</span><small>Jag läser en bok.</small></div></div><div class="home-guide"><span class="eyebrow">DIN VÄG FRAMÅT</span><h3>Du lär dig i din egen takt.</h3><p>Markera ord du kan och låt dina nästa övningar utgå från det du behöver träna.</p><button class="link-button" data-go="framsteg">Se mina framsteg <span>→</span></button></div></div>
+        </section>
+        <section class="page" id="page-ord" hidden>
+          <div class="page-heading"><span class="eyebrow">ORD & BETYDELSE</span><h1>Utforska ordförrådet<span class="period">.</span></h1><p>Från de första hälsningsfraserna till användbara vardagsord. Sök och välj ett ämne.</p></div>
+          <div class="word-toolbar"><div class="search-wrap"><span>⌕</span><input type="search" id="word-search" aria-label="Sök ord" placeholder="Sök på svenska, mongoliska eller latin…"></div><select id="word-sort" aria-label="Sortering"><option value="category">Sortera: Kategori</option><option value="az">Mongoliska A–Ö</option><option value="sv">Svenska A–Ö</option></select><button class="button outline" data-go="minaord">+ Lägg till</button></div>
+          <div class="filter-strip" id="word-categories"></div><div class="list-meta"><span id="word-count"></span><button class="text-control" id="word-only-saved" aria-pressed="false">☆ Endast sparade</button></div>
+          <div class="word-grid" id="word-grid"></div><div class="pagination" id="word-pagination"></div>
+        </section>
+        <section class="page" id="page-ova" hidden>
+          <div class="page-heading"><span class="eyebrow">INTERAKTIV TRÄNING</span><h1>Öva på ditt sätt<span class="period">.</span></h1><p>Alla ord kan förekomma i övningarna. Välj en aktivitet och låt orden komma tillbaka tills de sitter.</p></div>
+          <div class="mode-grid" id="mode-grid">
+            <button class="mode-tile active" data-mode="kort"><span class="mode-graphic">▤</span><b>Ordkort</b><small>Vänd och repetera</small></button>
+            <button class="mode-tile" data-mode="quiz"><span class="mode-graphic">◈</span><b>Flervalsquiz</b><small>Välj rätt översättning</small></button>
+            <button class="mode-tile" data-mode="stava"><span class="mode-graphic">Аа</span><b>Stava</b><small>Skriv med kyrilliska</small></button>
+            <button class="mode-tile" data-mode="para"><span class="mode-graphic">⇄</span><b>Para ihop</b><small>Hitta rätt par</small></button>
+          </div>
+          <div class="practice-controls"><label for="practice-category">Träna ämne</label><select id="practice-category"></select><label class="switch-label"><input type="checkbox" id="practice-saved"> Bara sparade ord</label><span class="muted" id="practice-pool-size"></span></div>
+          <div class="exercise-card" id="practice-stage" aria-live="polite"></div>
+        </section>
+        <section class="page" id="page-meningar" hidden>
+          <div class="page-heading"><span class="eyebrow">SPRÅK I PRAKTIKEN</span><h1>Bygg meningar<span class="period">.</span></h1><p>Lär dig ordföljd med riktiga vardagsmeningar, eller använd <em>hela ditt ordförråd</em> i strukturerade meningar.</p></div>
+          <div class="sentence-tabs" id="sentence-tabs"><button data-sentmode="vardag" class="selected">Vardagliga meningar</button><button data-sentmode="ordbank">Hela ordförrådet</button></div>
+          <div class="practice-controls" id="sentence-filters"><label for="sentence-category">Välj innehåll</label><select id="sentence-category"></select><span class="muted" id="sentence-coverage"></span></div>
+          <div class="exercise-card sentence-stage"><div class="exercise-top"><span class="eyebrow" id="sent-type">ÖVNING 01</span><span class="muted" id="sent-step"></span></div><div class="thin-progress"><span id="sent-progress"></span></div><p class="prompt-label" id="sent-prompt-label">Bygg meningen på mongoliska</p><h2 class="sentence-question" id="sent-question"></h2><div class="answer-area" id="sent-answer"></div><p class="prompt-label">Välj orden i rätt ordning</p><div class="token-bank" id="sent-bank"></div><div id="sent-feedback" class="feedback"></div><p id="sent-note" class="muted"></p><div class="exercise-footer"><button class="button outline" id="sent-reset">Börja om</button><button class="button subtle" id="sent-skip">Hoppa över</button><button class="button dark push-right" id="sent-check">Kontrollera →</button></div></div>
+        </section>
+        <section class="page" id="page-verb" hidden>
+          <div class="page-heading"><span class="eyebrow">FÖRSTÅ SPRÅKET</span><h1>Verb & grammatik<span class="period">.</span></h1><p>Utforska hur mongoliska verb ändras med tiden, och testa om du kan välja rätt form.</p></div>
+          <div class="grammar-grid"><div class="grammar-pick"><div class="eyebrow">VÄLJ ETT VERB</div><div id="verb-list" class="grammar-list"></div></div><div class="grammar-content"><div class="verb-intro" id="verb-title"></div><div class="verb-form-grid" id="verb-forms"></div><div id="verb-note" class="call-note"></div></div></div>
+          <div class="exercise-card grammar-quiz"><div class="exercise-top"><div><span class="eyebrow">SNABBÖVNING</span><h2>Vilken verbform passar?</h2></div><button class="button outline" id="verb-next">Ny fråga ↗</button></div><div class="grammar-question" id="verb-question"></div><div class="option-grid" id="verb-options"></div><div id="verb-feedback" class="feedback" aria-live="polite"></div></div>
+          <details class="grammar-info"><summary>Vokalharmoni – en snabbguide</summary><p>Ändelser anpassas efter vokalerna i ordets stam. I verböversikten ser du exempel på hur varje ord förändras. Vissa verb har oregelbundna eller anpassade stammar.</p><p>Exempel: <span class="mn">явсан</span> (åkte), <span class="mn">идсэн</span> (åt), <span class="mn">өгсөн</span> (gav).</p></details>
+        </section>
+        <section class="page" id="page-parlor" hidden>
+          <div class="page-heading"><span class="eyebrow">FÖR RESAN OCH VARDAGEN</span><h1>Din mongoliska parlör<span class="period">.</span></h1><p>Fraser för vardag, shopping, resor och möten. Använd ögonikonen för att öva utan facit.</p></div>
+          <div class="word-toolbar"><div class="search-wrap"><span>⌕</span><input id="phrase-search" type="search" placeholder="Sök efter en fras…" aria-label="Sök fraser"></div><label class="switch-label reveal-check"><input id="phrase-hide" type="checkbox"> Dölj mongoliskan</label></div><div class="phrase-jump" id="phrase-jump"></div><div id="phrase-list" class="phrase-sections"></div>
+        </section>
+        <section class="page" id="page-alfabet" hidden>
+          <div class="page-heading"><span class="eyebrow">BÖRJA FRÅN GRUNDEN</span><h1>Lär dig alfabetet<span class="period">.</span></h1><p>Mongolisk kyrilliska har 35 bokstäver, inklusive Ө och Ү. Klicka på en bokstav för att se hur den används.</p></div>
+          <div class="alphabet-intro"><div><span class="eyebrow">KÄNN IGEN TECKNEN</span><h2>А Б В Г Д <span>Ө Ү</span></h2><p>Vissa bokstäver ser bekanta ut men kan låta annorlunda än på svenska. Uttalsguiden är ungefärlig.</p></div><div class="alphabet-count"><strong>35</strong><span>bokstäver</span></div></div><div class="alphabet-grid" id="alphabet-grid"></div><div class="alphabet-detail" id="alphabet-detail"></div>
+        </section>
+        <section class="page" id="page-framsteg" hidden>
+          <div class="page-heading"><span class="eyebrow">DIN UTVECKLING</span><h1>Mina framsteg<span class="period">.</span></h1><p>Du samlar erfarenhet genom att öva och kan markera vilka ord du redan behärskar. Sparas i den här webbläsaren.</p></div>
+          <div class="progress-cards" id="progress-cards"></div><div class="dashboard-split"><div class="box"><span class="eyebrow">ORD I DIN BANK</span><h2>Det du kan växer.</h2><div class="large-meter"><span id="progress-fill"></span></div><p class="muted" id="progress-caption"></p><button class="button dark" data-go="ova">Fortsätt träna →</button></div><div class="box"><span class="eyebrow">SPARAD INFORMATION</span><h2>Dina övningar stannar här.</h2><p>XP, dagar i rad och ord du markerat som kända sparas lokalt. Dina egna ord kan exporteras till en JSON-fil som säkerhetskopia.</p><button class="button outline" id="progress-export">Exportera egna ord ↓</button><button class="text-control reset-link" id="progress-reset">Nollställ XP och inlärda ord</button></div></div>
+        </section>
+        <section class="page" id="page-minaord" hidden>
+          <div class="page-heading"><span class="eyebrow">ANPASSA LÄRPLATTFORMEN</span><h1>Egna ord<span class="period">.</span></h1><p>Fyll på med ord och fraser som du själv vill lära dig. De kommer automatiskt med i samtliga ordövningar och i meningsövningarna med hela ordförrådet.</p></div>
+          <div class="edit-grid"><div class="box"><span class="eyebrow">ETT ORD I TAGET</span><h2>Lägg till ett ord</h2><form id="word-form" class="add-form"><label>Mongoliska (kyrilliska)<input id="new-mn" required maxlength="90" placeholder="Жишээ нь: Хайр" autocomplete="off"></label><label>Svensk översättning<input id="new-sv" required maxlength="150" placeholder="T.ex. kärlek" autocomplete="off"></label><label>Kategori<input id="new-cat" list="category-suggestions" placeholder="Välj eller skriv eget ämne" maxlength="48" autocomplete="off"></label><datalist id="category-suggestions"></datalist><label>Anteckning (valfritt)<input id="new-note" maxlength="250" placeholder="T.ex. användning eller uttal"></label><button type="submit" class="button dark">Spara ord →</button></form></div><div class="box"><span class="eyebrow">FLERA ORD PÅ EN GÅNG</span><h2>Importera JSON</h2><p>Du kan importera en lista med samma format som <code>words.json</code>. Dubbletter hoppas över. Inget konto behövs.</p><textarea id="json-input" rows="8" spellcheck="false" aria-label="Klistra in JSON" placeholder='[{"mn":"Морь","sv":"Häst","cat":"Djur"}]'></textarea><div class="button-row"><button id="json-import" class="button outline">Importera ord</button><button id="words-export" class="button subtle">Exportera egna ↓</button></div><p class="muted">Vid publicering kan du även redigera <code>words.json</code> för att ändra grundlistan.</p></div></div>
+          <div class="box own-box"><div class="section-row compact"><div><span class="eyebrow">SPARADE I WEBBLÄSAREN</span><h2>Mina tillagda ord</h2></div><span class="muted" id="own-count">0 ord</span></div><div id="own-list"></div></div>
+        </section>
+      </main>
+      <footer class="footer"><span>mongolbota <span class="footer-dot">●</span> Lär dig lite, ofta.</span><span>Byggd för nyfikna språkstudenter.</span></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobilnavigation"><button data-page="hem" class="active"><span>⌂</span>Hem</button><button data-page="ord"><span>▦</span>Ord</button><button data-page="ova"><span>◈</span>Öva</button><button data-page="meningar"><span>☷</span>Meningar</button><button data-page="mer"><span>☰</span>Mer</button></nav>
+  <div id="mobile-menu" class="mobile-menu" hidden><div class="mobile-menu-head"><strong>Utforska mer</strong><button id="mobile-close" aria-label="Stäng menyn">✕</button></div><button data-page="verb">Verb & grammatik →</button><button data-page="parlor">Parlör →</button><button data-page="alfabet">Alfabetet →</button><button data-page="framsteg">Mina framsteg →</button><button data-page="minaord">Egna ord →</button></div>
+  <div id="toast" role="status" class="toast" hidden></div>
+</body>
+</html>
